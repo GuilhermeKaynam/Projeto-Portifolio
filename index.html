@@ -2,47 +2,66 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Projeto Portfólio" />
-    <meta name="author" content="Guihlerme Kaynam" />
+    <meta name="author" content="Generation Brasil" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <link rel="icon" type="image/svg" href="assests/img/favicon.svg" />
-    <title>Guilherme Kaynam</title>
+
+    <link rel="icon" type="image/svg" href="./assets/img/favicon.svg" />
+
+    <!-- Link para a Folha de Estilo da Página - CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Meu Perfil</title>
   </head>
   <body>
+    <!-- Cabeçalho da Página (header) -->
     <header>
-      <div id="header_content">
+      <!-- Div Conteudo do Cabeçalho -->
+      <div id="header_content" class="flex">
+        <!-- Titulo do Cabeçalho -->
         <div id="titulo">
+          <!-- Seu nome -->
           <h1>Guilherme Kaynam</h1>
         </div>
 
+        <!-- Conteudo do Menu da Página (header) -->
         <div id="menu">
+          <!-- Menu da Página -->
           <nav>
+            <!-- Marcadores não ordenados + links -->
             <ul id="menu">
               <li>
-                <a href="index.html"> Home </a>
+                <a href="index.html">Home</a>
               </li>
               <li>
-                <a href="contato.html" target="_blank"> Contato </a>
+                <a href="contato.html">Contato</a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
-    <main>
-      <section id="about">
-        <h2>Sobre Guilhereme Kaynam.</h2>
 
-        <div id="conteudo">
+    <!-- Seção Principal da Página (main) -->
+    <main>
+      <!-- Seção Sobre você -->
+      <section id="about" class="flex_start">
+        <!-- Título da Seção -->
+        <h2>Sobre Guilherme Kaynam</h2>
+
+        <!-- Conteúdo da Seção -->
+        <div id="conteudo" class="flex">
+          <!-- Imagem do criador do conteúdo -->
           <img
-            src="assests/img/user_01.svg"
-            border-radius="50"
-            width="100"
-            height="100"
+            src="./assets/img/IMG_2895.jpeg"
+            style="border-radius: 10%"
             alt="Foto do criador desse conteudo"
+            class="img_profile"
           />
 
+          <!-- Texto sobre o criador do conteúdo -->
           <article id="sobre_texto">
             <p>
               Sou Guilherme Kaynam, desenvolvedor FullStack apaixonado por
@@ -69,9 +88,13 @@
         </div>
       </section>
 
-      <section id="video">
+      <!-- Seção contendo um vídeo de sua preferência -->
+      <section id="video" class="flex_start">
+        <!-- Título da Seção -->
         <h2>Meu vídeo favorito:</h2>
-        <div class="youtube">
+
+        <!-- Vídeo da Seção -->
+        <div id="youtube" class="flex">
           <iframe
             width="560"
             height="315"
@@ -79,21 +102,32 @@
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          >
+          </iframe>
         </div>
       </section>
     </main>
 
-    <footer>
+    <!-- Rodapé da Página (footer) -->
+    <footer class="flex">
+      <!-- Seção de Contato - Redes Sociais-->
       <section id="redes_sociais">
-        <a href="https://www.linkedin.com/in/guilherme-kaynam">
-          <img src="assests/img/linkedin.svg" alt="LinkedIn" />
+        <a href="https://www.linkedin.com/in/guilherme-kayam">
+          <img
+            src="assets/img/linkedin.svg"
+            alt="LinkedIn"
+            class="social_icon"
+          />
         </a>
-        <a href="https://github.com/GuilhermeKaynam">
-          <img src="assests/img/github.svg" alt="Github" />
+        <a href="https://github.com/guilhermekayam">
+          <img src="assets/img/github.svg" alt="Github" class="social_icon" />
         </a>
-        <a href="https://www.instagram.com/guikaynam/">
-          <img src="assests/img/instagram.svg" alt="Instagram" />
+        <a href="https://instagram.com/guikaynam">
+          <img
+            src="assets/img/instagram.svg"
+            alt="Instagram"
+            class="social_icon"
+          />
         </a>
       </section>
 
