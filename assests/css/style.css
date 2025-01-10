@@ -10,16 +10,14 @@
 }
 
 :root {
-    --purple-200: #9a7bd1;
-    --purple-500: #090729;
-    --purple-800: #e2e1e6;
-
-    --black-800: #171717;
-
-    --gray-200: #d6d5e2;
-    --gray-400: #505861;
-
-    --white: #F9F9F9;
+    ---200: #919191;
+    --purple-500: #0e061f;
+    --purple-800: #ffffff;
+    --black-800: #000000;
+    --gray-200: #eef2ff;
+    --gray-400: #bad7f8;
+    --white: rgb(98, 80, 131);
+    --light-blue: #9a5bff; /* Azul claro para o hover */
 }
 
 html {
@@ -32,11 +30,12 @@ body {
     color: var(--black-800);
 }
 
-/* Definindo as configurações de títulos e paragrafo */
+/* Definindo as configurações de títulos e parágrafos */
 h1 {
-    color: black;
+    color: var(--white);
     font-size: 2rem;
     font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h2 {
@@ -62,8 +61,6 @@ p {
     padding: 0.5rem 0;
 }
 
-/* Definindo as configurações do Flexbox */
-
 .flex {
     display: flex;
     justify-content: center;
@@ -75,7 +72,6 @@ p {
     justify-content: flex-start;
 }
 
-/* Estilização da Seção Header */
 #header_content {
     height: 80px;
     position: sticky;
@@ -87,6 +83,7 @@ p {
     border-bottom: 1px solid var(--purple-500);
 }
 
+/* Estilos para o menu */
 #menu li {
     display: inline;
     padding: 1rem;
@@ -94,38 +91,52 @@ p {
 
 #menu li a {
     text-decoration: none;
-    color: black;
-    font-size: 16px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    color: var(--black-800); /* Cor preta para o menu */
+    font-size: 16px; /* Diminuindo o tamanho da fonte */
+    font-weight: 300; /* Deixando a fonte mais fina */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
 }
 
+/* Estilo para o hover (quando o mouse passa por cima) */
 #menu li a:hover {
-    color: #815997;
+    color: var(--light-blue); /* Cor azul claro no hover */
     text-decoration: underline;
 }
 
+/* Para os ícones de redes sociais no footer */
+#redes_sociais a img {
+  transition: filter 0.3s ease; /* Suaviza a transição de cor */
+}
 
+/* Efeito de hover nos ícones das redes sociais - mudar cor */
+#redes_sociais a:hover img {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(7484%) hue-rotate(202deg) brightness(107%) contrast(104%); /* Alteração de cor */
+}
 
-/* Estilização da Seção About */
-
+/* Estilo da Seção Sobre Mim */
 #about {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row; /* Alinhando os itens horizontalmente */
+    justify-content: center; /* Centralizando os itens */
+    align-items: center; /* Alinhando os itens verticalmente */
+    gap: 2rem; /* Espaço entre a imagem e o texto */
     margin: 2rem auto;
-    width: 90%;
+    width: 90%; /* Largura da seção */
 }
 
-#conteudo {
-    flex-direction: row;
-    gap: 2rem;
-
+#about img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; /* Tornando a imagem redonda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
 }
 
-.img_profile {
-    width: 200px;
+#sobre_texto {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify; /* Justificando o texto */
 }
-
-/* Estilização da Seção Video */
 
 #video {
     flex-direction: column;
@@ -133,14 +144,13 @@ p {
     width: 90%;
 }
 
-/* Estilização da Seção Footer */
-
+/* Estilização do Footer */
 footer {
     flex-direction: column;
     margin: 0;
     padding: 2rem;
     color: var(--white);
-    background-color: var(--purple-500);
+    background-color: #0c1024;
     font-weight: bold;
     text-align: center;
 }
@@ -150,14 +160,6 @@ footer {
     justify-content: space-evenly;
     margin: 1rem 0 0 0;
     width: 320px;
-}
-
-#redes_sociais a img {
-    transition: filter 0.3s ease;
-}
-
-#redes_sociais a:hover img {
-    filter: brightness(0) saturate(100%) invert(36%) sepia(96%) saturate(7484%) hue-rotate(202deg) brightness(107%) contrast(104%);
 }
 
 .social_icon {
@@ -170,6 +172,7 @@ footer {
     filter: brightness(0) saturate(100%) invert(65%) sepia(59%) saturate(2437%) hue-rotate(213deg) brightness(86%) contrast(88%);
 }
 
+/* Estilização da Página de Contato */
 #contact {
     flex-direction: row;
     gap: 2rem;
@@ -215,8 +218,7 @@ form span {
 form button {
     text-align: center;
     padding: 0.75rem 2rem;
-    background: rgb(112, 110, 110);
-    transition: color 0.3s ease;
+    background: var(--purple-800);
     border: 1px solid var(--purple-500);
     color: var(--white);
     border-radius: 0.75rem;
@@ -226,7 +228,6 @@ form button {
 
 form button:hover {
     background: var(--purple-500);
-    transition: color 0.3s ease;
 }
 
 /* Estilização do Mapa */
@@ -240,4 +241,24 @@ form button:hover {
     font-size: 1rem;
     text-align: justify;
     font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column; /* Mudando para coluna em telas pequenas */
+        align-items: flex-start; /* Alinhando os itens à esquerda */
+    }
+
+    #about img {
+        margin-bottom: 1rem; /* Adicionando espaço entre imagem e texto */
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    #redes_sociais {
+        width: 100%; /* Ajustando a largura para telas pequenas */
+    }
 }
