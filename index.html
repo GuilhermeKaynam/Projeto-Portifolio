@@ -2,38 +2,68 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Projeto Portfólio" />
-    <meta name="author" content="Guihlerme Kaynam" />
+    <meta name="author" content="Guilherme Kaynam" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <link rel="stylesheet" href="assests/css/style.css" />
-    <link rel="icon" type="image/svg" href="assests/img/favicon.svg" />
-    <title>Guilherme Kaynam</title>
+
+    <link rel="icon" type="image/svg" href="./assests/img/favicon.svg" />
+
+    <!-- Link para a Folha de Estilo da Página - CSS -->
+    <link rel="stylesheet" href="./assests/css/style.css" />
+
+    <title>Meu Perfil</title>
   </head>
   <body>
+    <!-- Cabeçalho da Página (header) -->
     <header>
+      <!-- Div Conteudo do Cabeçalho -->
       <div id="header_content" class="flex">
+        <!-- Titulo do Cabeçalho -->
         <div id="titulo">
+          <!-- Seu nome -->
           <h1>Guilherme Kaynam</h1>
         </div>
+
+        <!-- Conteudo do Menu da Página (header) -->
         <div id="menu">
+          <!-- Menu da Página -->
           <nav>
+            <!-- Marcadores não ordenados + links -->
             <ul id="menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="contato.html">Contato</a></li>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="contato.html">Contato</a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
+    <!-- Seção Principal da Página (main) -->
     <main>
-      <section id="about">
+      <!-- Seção Sobre você -->
+      <section id="about" class="flex_start">
+        <!-- Título da Seção -->
         <h2>Sobre Guilherme Kaynam</h2>
+
+        <!-- Conteúdo da Seção -->
         <div id="conteudo" class="flex">
-          <img src="assests/img/IMG_2895.jpeg" alt="Foto do criador" />
+          <!-- Imagem do criador do conteúdo -->
+          <img
+            src="./assests/img/IMG_2895.jpeg"
+            style="border-radius: 10%"
+            alt="Foto do criador desse conteudo"
+            class="img_profile"
+          />
+
+          <!-- Texto sobre o criador do conteúdo -->
           <article id="sobre_texto">
-            <p style="text-align: right">
+            <p>
               Sou Guilherme Kaynam, desenvolvedor FullStack apaixonado por
               tecnologia e inovação. Meu primeiro contato com a programação
               aconteceu aos 14 anos, e desde então, mergulhei de cabeça nesse
@@ -44,7 +74,7 @@
               mais do que uma profissão; é uma forma de transformar ideias em
               realidade e impactar positivamente o mundo ao meu redor.
             </p>
-            <p style="text-align: right">
+            <p>
               Ao longo da minha jornada, tive a oportunidade de trabalhar em
               projetos desafiadores, como um sistema de gestão para lava rápido
               e um e-commerce completo. Atualmente, estou criando o InovaMed, um
@@ -58,9 +88,13 @@
         </div>
       </section>
 
-      <section id="video">
+      <!-- Seção contendo um vídeo de sua preferência -->
+      <section id="video" class="flex_start">
+        <!-- Título da Seção -->
         <h2>Meu vídeo favorito:</h2>
-        <div id="youtube">
+
+        <!-- Vídeo da Seção -->
+        <div id="youtube" class="flex">
           <iframe
             width="560"
             height="315"
@@ -68,28 +102,33 @@
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          >
+          </iframe>
         </div>
       </section>
     </main>
 
+    <!-- Rodapé da Página (footer) -->
     <footer class="flex">
+      <!-- Seção de Contato - Redes Sociais-->
       <section id="redes_sociais">
-        <a href=""
-          ><img
+        <a href="https://www.linkedin.com/in/guilherme-kaynam">
+          <img
             src="assests/img/linkedin.svg"
             alt="LinkedIn"
             class="social_icon"
-        /></a>
-        <a href=""
-          ><img src="assests/img/github.svg" alt="Github" class="social_icon"
-        /></a>
-        <a href=""
-          ><img
+          />
+        </a>
+        <a href="https://github.com/guilhermekaynam">
+          <img src="assests/img/github.svg" alt="Github" class="social_icon" />
+        </a>
+        <a href="https://instagram.com/guikaynam">
+          <img
             src="assests/img/instagram.svg"
             alt="Instagram"
             class="social_icon"
-        /></a>
+          />
+        </a>
       </section>
 
       <h3>&copy; Feito com 🧡 por Guilherme Kaynam - 2025</h3>
