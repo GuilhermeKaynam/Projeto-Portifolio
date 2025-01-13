@@ -1,47 +1,60 @@
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+// Selecionar o formulário
+const formulario = document.querySelector("form");
+
 formulario.addEventListener("submit", function (event) {
-  event.preventDefault();
+  event.preventDefault(); // Impedir comportamento padrão
 
-  const campoNome = document.querySelector("#name");
+  // Selecionar campos e spans de erro
+  const campoNome = document.querySelector("#nome");
   const txtNome = document.querySelector("#txtNome");
-
-  if (campoNome.value.length < 3) {
-    txtNome.innerHTML = "O Nome deve ter no minimo 3 caracteres.";
-    campoNome.focus();
-    return;
-  } else {
-    txtNome.innerHTML = "";
-  }
 
   const campoEmail = document.querySelector("#email");
   const txtEmail = document.querySelector("#txtEmail");
 
-  if (!campoEmail.value.match(emailRegex)) {
+  const campoSubject = document.querySelector("#subject");
+  const txtSubject = document.querySelector("#txtSubject");
+
+  const campoMessage = document.querySelector("#message");
+
+  let isValid = true; // Indicador geral de validação
+
+  // Validação do Nome
+  if (campoNome.value.trim().length < 3) {
+    txtNome.innerHTML = "O Nome deve ter no mínimo 3 caracteres.";
+    campoNome.focus();
+    isValid = false;
+  } else {
+    txtNome.innerHTML = "";
+  }
+
+  // Validação do E-mail
+  if (!emailRegex.test(campoEmail.value)) {
     txtEmail.innerHTML = "Digite um E-mail válido.";
     campoEmail.focus();
-    return;
+    isValid = false;
   } else {
     txtEmail.innerHTML = "";
   }
 
-  const campoSubject = document.querySelector("#subject");
-  const txtSubject = document.querySelector("#txtSubject");
-
-  if (campoSubject.value.length < 5) {
-    txtSubject.innerHTML = "O Assunto deve ter no minimo 5 caracteres.";
+  // Validação do Assunto
+  if (campoSubject.value.trim().length < 5) {
+    txtSubject.innerHTML = "O Assunto deve ter no mínimo 5 caracteres.";
     campoSubject.focus();
-    return;
+    isValid = false;
   } else {
     txtSubject.innerHTML = "";
   }
 
-  const campoMessage = document.querySelector("#message");
+  // Se todas as validações forem bem-sucedidas
+  if (isValid) {
+    window.alert("Formulário enviado com sucesso!");
 
-  window.alert("Formulário Enviado com Sucesso!");
-
-  campoNome.value = "";
-  campoEmail.value = "";
-  campoSubject.value = "";
-  campoMessage.value = "";
+    // Resetar campos do formulário
+    campoNome.value = "";
+    campoEmail.value = "";
+    campoSubject.value = "";
+    campoMessage.value = "";
+  }
 });
